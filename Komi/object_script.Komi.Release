@@ -1,0 +1,10 @@
+release/edge.o
+release/main.o
+release/myglwidget.o
+release/mypainter.o
+release/top.o
+release/tsp.o
+release/window2.o
+release/moc_myglwidget.o
+release/moc_tsp.o
+release/moc_window2.o

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>window2</class>
+ <widget class="QDialog" name="window2">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>637</width>
+    <height>495</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Help</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>13</y>
+     <width>830</width>
+     <height>497</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Коммивояжер построен для нахождения кратчайшего пути 
+по которому можно пройти все точки и вернуться в начальную, 
+начальную вершину коммивояжер выюирает сам, чтобы
+посторить оптимальный путь. (Коммивояжер
+спроектирован для решения задачи с 8 вершинами)
+
+Для того, чтобы коммивояжер работал правильно, нужно: 
+1. В вашем маршруте обязательно должны быть хотя бы 2 вершины ,
+между собой они должны иметь путь. 
+2. Прежде чем нажать кнопку &quot;Рассчитать расстояние&quot; нужно
+добавить вершины и указать расстояние между ними. 
+
+Для того, чтобы удалить вершину вам нужно нажать на кнопку
+с надписью &quot;Удалить вершину&quot;, но сначала вам нужно указать вершину, 
+которую хотите удалить.
+</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Для того, чтобы добавить одностороньюю связь (-&gt;) вам нужно: 
+1. Указать начальную и конечную точку пути, при этом вершины
+должны существовать.
+2. Указать вес связи.
+Это же правило применимо для добавления двунаправленных связей (&lt; - &gt;).</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_3">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Если вы хотите удалить все, что начертили, нажмите на 
+кнопку &quot;Clear&quot;.</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

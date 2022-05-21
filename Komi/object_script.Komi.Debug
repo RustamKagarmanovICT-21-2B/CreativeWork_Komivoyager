@@ -1,0 +1,10 @@
+debug/edge.o
+debug/main.o
+debug/myglwidget.o
+debug/mypainter.o
+debug/top.o
+debug/tsp.o
+debug/window2.o
+debug/moc_myglwidget.o
+debug/moc_tsp.o
+debug/moc_window2.o

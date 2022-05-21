@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TSP</class>
+ <widget class="QMainWindow" name="TSP">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>913</width>
+    <height>605</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TSP</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(240, 240, 240);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>501</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout"/>
+   </widget>
+   <widget class="QPushButton" name="Btn_Add_Top">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>10</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>inherit</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676d7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+QPushButton:hover {
+  background: #1d49aa;
+}
+
+QPushButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}</string>
+    </property>
+    <property name="text">
+     <string>Добавить вершину</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_Del_Top">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>400</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>inherit</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676d7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+QPushButton:hover {
+  background: #1d49aa;
+}
+
+QPushButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}</string>
+    </property>
+    <property name="text">
+     <string>Удалить вершину</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_Add_Edge_1">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>180</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>inherit</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676d7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+QPushButton:hover {
+  background: #1d49aa;
+}
+
+QPushButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}</string>
+    </property>
+    <property name="text">
+     <string>Добавить связь  (- &gt;)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_Add_Edge_2">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>350</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>inherit</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676d7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+QPushButton:hover {
+  background: #1d49aa;
+}
+
+QPushButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}QPushButton
+{
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676d7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+QPushButton:hover {
+  background: #1d49aa;
+}
+
+QPushButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}</string>
+    </property>
+    <property name="text">
+     <string>Добавить связь  (&lt; - &gt;)</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_Del_Top_index">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>400</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(71, 98, 68);
+background-color: rgb(125, 184, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Add_Edge_1_Top_1">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>60</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #4676d7;</string>
+    </property>
+    <property name="text">
+     <string>Начальная вершина</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Add_Edge_1_Top_2">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>100</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #4676d7;</string>
+    </property>
+    <property name="text">
+     <string>Конечная вершина</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_Add_Edge_1_Top_1">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>60</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(71, 98, 68);
+background-color: #4676d7;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_Add_Edge_1_Top_2">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>100</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(71, 98, 68);
+background-color:  rgb(150, 184, 255);</string>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Add_Edge_1_Weight">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>140</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #4676d7;</string>
+    </property>
+    <property name="text">
+     <string>Вес связи</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_Add_Edge_1_Weight">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>140</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(71, 98, 68);
+background-color:  rgb(175, 184, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Result">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>510</y>
+      <width>381</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(1, 0, 153)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Path_length">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>540</y>
+      <width>381</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(1, 0, 153)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Errors">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>570</y>
+      <width>381</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(217, 0, 4);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="L_Clear">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>540</y>
+      <width>84</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+     background-color:  rgb(211, 211, 211);
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 10px;
+     border-color:  rgb(128, 128, 128);
+     font: bold 14px;
+     min-width: 4em;
+     padding: 6px;
+ }
+QPushButton:pressed {
+     background-color: rgb(220, 220, 220);
+     border-style: inset;
+ }</string>
+    </property>
+    <property name="text">
+     <string>Clear</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="help">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>540</y>
+      <width>84</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+     background-color:  rgb(211, 211, 211);
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 10px;
+     border-color:  rgb(128, 128, 128);
+     font: bold 14px;
+     min-width: 1em;
+     padding: 6px;
+ }
+QPushButton:pressed {
+     background-color: rgb(220, 220, 220);
+     border-style: inset;
+ }</string>
+    </property>
+    <property name="text">
+     <string>HELP</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Add_Edge_2_Weight">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>260</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(168, 168, 129);</string>
+    </property>
+    <property name="text">
+     <string>Вес связи</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_Calculate">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>450</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>inherit</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676d7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+QPushButton:hover {
+  background: #1d49aa;
+}
+
+QPushButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}QPushButton
+{
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676d7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+QPushButton:hover {
+  background: #1d49aa;
+}
+
+QPushButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}</string>
+    </property>
+    <property name="text">
+     <string>Рассчитать оптимальный путь</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_Add_Edge_2_Weight">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>310</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(71, 98, 68);
+background-color:  rgb(175, 184, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Add_Edge_1_Weight_2">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>310</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #4676d7;</string>
+    </property>
+    <property name="text">
+     <string>Вес связи</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_Add_Edge_2_Top_2">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>270</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(71, 98, 68);
+background-color:  rgb(150, 184, 255);</string>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Add_Edge_1_Top_3">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>270</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #4676d7;</string>
+    </property>
+    <property name="text">
+     <string>Конечная вершина</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Add_Edge_1_Top_4">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>230</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #4676d7;</string>
+    </property>
+    <property name="text">
+     <string>Начальная вершина</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_Add_Edge_2_Top_1">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>230</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(71, 98, 68);
+background-color: #4676d7;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
